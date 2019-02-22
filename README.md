@@ -14,7 +14,7 @@ PhotoLocation.swift
 - Services -- API services
 > APIClient.swift
 Endpoint.swift
-- ViewControllers -- View Controllers
+- ViewControllers
 > MapViewController.swift
 PictureDetailsVC.swift
 - ViewModels
