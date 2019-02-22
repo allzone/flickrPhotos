@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.8.1)
+  - ModelMapper (9.0.1):
+    - ModelMapper/Core (= 9.0.1)
+  - ModelMapper/Core (9.0.1)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - ModelMapper
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ModelMapper
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  ModelMapper: 89a61430a75e6265040dc9555ab1feddeb25b986
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 5104c510806cb6e4570691dff6b07f0c73eb863f
+
+COCOAPODS: 1.6.0.rc.2

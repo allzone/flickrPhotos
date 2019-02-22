@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="FlickrPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QCq-0P-M23">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="btT-tf-KhM"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QCq-0P-M23" secondAttribute="bottom" id="NZ7-X3-KHZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QCq-0P-M23" secondAttribute="trailing" id="Y2a-ja-BVa"/>
+                            <constraint firstItem="QCq-0P-M23" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="blB-BI-Ior"/>
+                            <constraint firstItem="QCq-0P-M23" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f2v-jE-r6y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="QCq-0P-M23" id="Qhc-W9-3NQ"/>
+                        <segue destination="ChQ-4f-aYw" kind="presentation" identifier="OpenPictureDetails" modalTransitionStyle="crossDissolve" id="gQp-Lg-cty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="27"/>
+        </scene>
+        <!--Picture DetailsVC-->
+        <scene sceneID="lLI-It-WO5">
+            <objects>
+                <viewController id="ChQ-4f-aYw" customClass="PictureDetailsVC" customModule="FlickrPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yM0-Bu-OAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wCq-cJ-J16">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wCq-cJ-J16" firstAttribute="top" secondItem="wNT-mu-bfb" secondAttribute="top" id="8Dg-bv-VCy"/>
+                            <constraint firstItem="wCq-cJ-J16" firstAttribute="leading" secondItem="wNT-mu-bfb" secondAttribute="leading" id="8Ra-x5-huq"/>
+                            <constraint firstItem="wNT-mu-bfb" firstAttribute="trailing" secondItem="wCq-cJ-J16" secondAttribute="trailing" id="TTh-q5-vvI"/>
+                            <constraint firstItem="wNT-mu-bfb" firstAttribute="bottom" secondItem="wCq-cJ-J16" secondAttribute="bottom" id="qmi-B4-4mK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wNT-mu-bfb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MB4-Mh-pgt" appends="YES" id="XXP-HL-jvQ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wCq-cJ-J16" id="rkc-04-jWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgv-z9-5Nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MB4-Mh-pgt">
+                    <connections>
+                        <action selector="closeView" destination="ChQ-4f-aYw" id="8jv-HG-Msh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="913" y="27"/>
+        </scene>
+    </scenes>
+</document>
