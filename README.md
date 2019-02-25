@@ -22,6 +22,14 @@ PictureDetailsVC.swift
 - Views
 > MapAnnotationView.swift
 
+
+## How to run
+In order to use and run the project you need to have installed Cocoapods on your Mac.
+[Here is how to install it.](https://guides.cocoapods.org/using/getting-started.html)
+
+- Run $ pod install in your project directory.
+- Open FlickrPhotos.xcworkspace and build.
+
 ## Get started
 The project is built using:
 
